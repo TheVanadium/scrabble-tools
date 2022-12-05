@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script> 
+    <py-env>
+        -paths:
+            - /mnemonicfinder.py
+    </py-env>
+    <title>Mnemonic Finder</title>
+</head>
+<body>
+    <h1>Mnemonic Finder</h1>
+    <p>Enter a word to find a mnemonic</p>    
+    <input type="text" id="letters" />
+    <button id="find" onclick="generateMnemonics()">Generate Mnemonics</button>
+    <p id="mnemonic"></p>
+
+</body>
+    <script>
+        function generateMnemonics() {
+            let letters = document.getElementById("letters").value;
+            
+            document.getElementById("letters").value = "";
+        }
+    </script>
+</html>
